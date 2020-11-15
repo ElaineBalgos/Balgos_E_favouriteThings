@@ -1,0 +1,40 @@
+.lightbox {
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  display: none;
+}
+
+.showLB {
+  display: block;
+}
+
+#iceCreamMsg,
+#cakeMsg,
+#teaMsg {
+  display: flex;
+  flex-direction: row;
+
+  position: absolute;
+  background-color: white;
+  opacity: 75%;
+  width: 75vw;
+  border: 5px solid rgba(137, 30, 247, 0.5);
+
+  margin: 30px;
+  padding: 30px;
+}
+
+.closeBTN {
+  color: rgba(137, 30, 247);
+  font-size: 2em;
+  padding: 10px;
+  float: right;
+  cursor: pointer;
+}
+
+.msg {
+  margin: 0 auto;
+  font-size: 3em;
+}

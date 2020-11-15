@@ -1,0 +1,198 @@
+@media only screen and (min-width: 1024px) {
+  body {
+    background: purple;
+  }
+
+  .user {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+  }
+}
+/* css comments work too */
+body {
+  font-family: "Sulphur Point", "arial", sans-serif;
+  font-size: 20px;
+  background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+  margin: 0 0 50px 0;
+  border: 0;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.box2 {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+#header {
+  font-size: 2.75em;
+}
+
+h1 {
+  padding-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+h4 {
+  color: white;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+.user {
+  width: 300px;
+  height: 375px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .user {
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #header {
+    font-size: 3.5em;
+  }
+
+  h4 {
+    font-size: 2em;
+    line-height: 1em;
+  }
+
+  .user {
+    width: 900px;
+    height: 600px;
+  }
+}
+nav {
+  margin: 0 auto;
+  text-align: center;
+}
+nav ul {
+  padding-inline-start: 0;
+}
+nav .nav-item {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(137, 30, 247, 0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  border: 0.25em solid white;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+nav .nav-item a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+nav .nav-item a:hover::before {
+  content: attr(data-active);
+}
+nav .nav-item a:hover::after {
+  color: pink;
+  content: "CLICK ME";
+}
+
+@media only screen and (min-width: 1440px) {
+  ul {
+    font-size: 2em;
+  }
+}
+.lightbox {
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  display: none;
+}
+
+.showLB {
+  display: block;
+}
+
+#iceCreamMsg,
+#cakeMsg,
+#teaMsg {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  background-color: white;
+  opacity: 75%;
+  width: 75vw;
+  border: 5px solid rgba(137, 30, 247, 0.5);
+  margin: 30px;
+  padding: 30px;
+}
+
+.closeBTN {
+  color: #891ef7;
+  font-size: 2em;
+  padding: 10px;
+  float: right;
+  cursor: pointer;
+}
+
+.msg {
+  margin: 0 auto;
+  font-size: 3em;
+}
+
+.user-section {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.user {
+  text-align: center;
+  padding: 10px;
+}
+.user .user-name,
+.user .user-category,
+.user .user-rate {
+  margin: 0 auto;
+}
+.user img {
+  max-width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  border: 0.25em solid white;
+  border-radius: 2.5em;
+}
+
+@media screen and (min-width: 1024px) {
+  .user {
+    flex: 1;
+  }
+
+  .user img {
+    max-width: 300px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .user {
+    text-align: center;
+  }
+
+  .user img {
+    max-width: 400px;
+  }
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(137, 30, 247, 0.5);
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+}
+
+/*# sourceMappingURL=master.css.map */

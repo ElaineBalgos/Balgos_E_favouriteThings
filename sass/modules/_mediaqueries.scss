@@ -1,0 +1,16 @@
+@media only screen and (min-width: 1024px) {
+  // whatever styles you need here
+  body {
+    background: purple;
+  }
+
+  .user {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+  }
+}
+
+// this is a SASS comment
+
+/* css comments work too */
