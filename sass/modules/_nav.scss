@@ -1,0 +1,41 @@
+nav {
+  margin: 0 auto;
+  text-align: center;
+
+  ul {
+    padding-inline-start: 0;
+  }
+
+  .nav-item {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    background-color: $main-sec-background;
+    box-shadow: $main-box-shadow;
+    border: $main-border;
+
+    @include roundCorners(8px);
+    @include addPadding(5px 10px);
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+
+      &:hover::before {
+        content: attr(data-active);
+      }
+
+      &:hover::after {
+        color: pink;
+        content: "CLICK ME";
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  ul {
+    font-size: 2em;
+  }
+}

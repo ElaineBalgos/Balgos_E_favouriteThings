@@ -1,0 +1,70 @@
+// main rules go here
+
+// another generic comment{
+body {
+  font-family: $main-font-family;
+  font-size: $main-font-size;
+
+  background: $main-background;
+
+  margin: 0 0 50px 0;
+  border: 0;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+
+  @include roundCorners(20px);
+}
+
+.box2 {
+  width: 300px;
+  height: 300px;
+
+  @include roundCorners(50%);
+}
+
+#header {
+  font-size: 2.75em;
+}
+
+h1 {
+  padding-top: 20px;
+  color: $main-color;
+  text-align: center;
+}
+
+h4 {
+  color: $main-color;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+.user {
+  width: 300px;
+  height: 375px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .user {
+    width: 500px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #header {
+    font-size: 3.5em;
+  }
+
+  h4 {
+    font-size: 2em;
+    line-height: 1em;
+  }
+
+  .user {
+    width: 900px;
+    height: 600px;
+  }
+}

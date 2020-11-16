@@ -1,0 +1,42 @@
+.user-section {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.user {
+  // flex: 1;
+  text-align: center;
+  @include addPadding(10px);
+
+  .user-name,
+  .user-category,
+  .user-rate {
+    margin: 0 auto;
+  }
+
+  img {
+    max-width: 100%;
+    box-shadow: $main-box-shadow;
+    border: $main-border;
+    border-radius: $main-border-radius;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .user {
+    flex: 1;
+  }
+
+  .user img {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .user {
+    text-align: center;
+  }
+  .user img {
+    max-width: 400px;
+  }
+}
