@@ -23,9 +23,9 @@
         <!-- this is an HTML component -->
         <nav class="main-nav">
             <ul>
-                <li class="nav-item"><a href="#">Ice Cream</a></li>
-                <li class="nav-item"><a href="#">Cake</a></li>
-                <li class="nav-item"><a href="#">Tea</a></li>
+                <li data-click-target="btn1" class="nav-item"><a href="#">Ice Cream</a></li>
+                <li data-click-target="btn2" class="nav-item"><a href="#">Cake</a></li>
+                <li data-click-target="btn3" class="nav-item"><a href="#">Tea</a></li>
                 <!-- <li class="nav-item"><a href="#">item 4</a></li>
                 <li class="nav-item"><a href="#">item 5</a></li> -->
             </ul>
@@ -42,20 +42,25 @@
 
         <!-- this is a lightbox-->
 
-        <section class="lightbox">
-            <div id="iceCreamMsg">
-                <span class="closeBTN">X</span>
-                <p class="msg">Good or bad day, ICE CREAM will save the day!</p>
+        <section class="lightbox" id="lightbox">
+            <div id="iceCreamMsg" class="lightbox">
+                <div class="msgHeader">HEY YOU!</div>
+                <span data-close-button class="closeBTN">&times;</span>
+                <div class="msgBody">Good or bad day, ICE CREAM will save the day!</div>
             </div>
-            <div id="cakeMsg">
-                <span class="closeBTN">X</span>
-                <p class="msg">We only live once! So you better enjoy life and eat CAKE!</p>
+            <div id="cakeMsg" class="lightbox">
+                <div class="msgHeader">HEY YOU!</div>
+                <span class="closeBTN">&times;</span>
+                <div class="msgBody">We only live once! So you better enjoy life and eat CAKE!</div>
             </div>
-            <div id="teaMsg">
-                <span class="closeBTN">X</span>
-                <p class="msg">If theres a TEA, theres a hope!</p>
+            <div id="teaMsg" class="lightbox">
+                <div class="msgHeader">HEY YOU!</div>
+                <span class="closeBTN">&times;</span>
+                <div class="msgBody">If theres a TEA, theres a hope!</div>
             </div>
         </section>
+
+        <div id="overlay"></div>
 
         <!-- add a users section here -->
         <section class="user-section" id="user-image">

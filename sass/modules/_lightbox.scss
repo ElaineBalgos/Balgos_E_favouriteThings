@@ -1,10 +1,16 @@
-.lightbox {
-  position: absolute;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
-  display: none;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
+
+// .lightbox {
+//   // position: absolute;
+//   // justify-content: center;
+//   // text-align: center;
+//   // margin: 0 auto;
+//   // display: none;
+// }
 
 .showLB {
   display: block;
@@ -13,17 +19,22 @@
 #iceCreamMsg,
 #cakeMsg,
 #teaMsg {
-  display: flex;
-  flex-direction: row;
-
-  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 2px solid rgba(137, 30, 247, 0.5);
+  border-radius: 10px;
+  z-index: 10;
   background-color: white;
   opacity: 75%;
-  width: 75vw;
-  border: 5px solid rgba(137, 30, 247, 0.5);
+  width: 500px;
+  max-width: 80%;
 
-  margin: 30px;
-  padding: 30px;
+  .active {
+    transform: translate(-50%, 50%) scale(1);
+  }
 }
 
 .closeBTN {
@@ -34,7 +45,42 @@
   cursor: pointer;
 }
 
-.msg {
-  margin: 0 auto;
-  font-size: 3em;
+.msgHeader {
+  padding: 10px 15px;
+  display: flex;
+  justify-self: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(137, 30, 247, 0.5);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.msgHeader,
+.closeBTN {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.msgBody {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 25%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
 }
